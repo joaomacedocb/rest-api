@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'rest_framework_simplejwt',
+    'accounts'
 ]
 
 MIDDLEWARE = [
@@ -80,6 +81,10 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     "SLIDING_TOKEN_LIFETIME": timedelta(days=1),
 }
+
+# DEFINING APP FOR USERS
+
+AUTH_USER_MODEL = 'accounts.User'
 
 
 # Database
