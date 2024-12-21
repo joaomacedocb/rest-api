@@ -17,3 +17,7 @@ class Group(models.Model):
     name = models.CharField(max_length=80)
     company = models.ForeignKey(Company)
     
+class Group_Permission(models.Model):
+    group = models.ForeignKey(Group, on_delete=models.CASCADE)
+    permission = models.ForeignKey(Permission, on_delete=models.CASCADE)
+    
