@@ -60,9 +60,9 @@ class Authentication:
         return user
     
     @staticmethod
-    def _create_company_record(user) -> None:
+    def _create_company_record(user: User) -> None:
         Company.objects.create(
-                name = 'Nome da empresa',
+                name = f'{user.name}\'s new company.',
                 user_id = user.id
                 )
         
